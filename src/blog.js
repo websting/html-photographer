@@ -46,7 +46,7 @@ architectural photography:
       slug: "portraits-in-silence",
       title: "Portraits in Silence",
       date: "August 28, 2025",
-      author: "John Doe",
+      author: "Jane Doe",
       image: "/public/brothers.jpg",
       content: `
 Stillness reveals more than motion ever could.
