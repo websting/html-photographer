@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photographer – Home</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (for demo, in production use via npm) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Vite main.js -->
+  <script type="module" defer src="/src/main.js"></script>
+</head>
+
+<body class="w-full min-h-screen relative">
+
+  <!-- ===================== -->
+  <!-- NAVIGATION -->
+  <!-- ===================== -->
+  <section id="navigation" class="relative z-50 ">
+    <nav class="fixed top-6 left-6 md:top-10 md:left-10">
+      <button id="menuBtn" class="space-y-1 cursor-pointer bg-gray-900/70 p-2 rounded-md
+             hover:bg-gray-900/90 transition-colors duration-300">
+        <div class="w-8 h-1 bg-white"></div>
+        <div class="w-8 h-1 bg-white"></div>
+        <div class="w-8 h-1 bg-white"></div>
+      </button>
+    </nav>
+
+    <!-- Slide-out menu and backdrop -->
+    <div id="sideMenu" class="fixed top-0 right-0 h-full w-64 bg-black/80 backdrop-blur-md text-white p-6
+           transform translate-x-full transition-transform duration-500 z-50">
+      <h2 class="text-2xl font-bold mb-6">Menu</h2>
+      <nav class="flex flex-col space-y-4 text-lg">
+        <a href="#" class="hover:text-gray-300">Home</a>
+        <a href="#about" class="hover:text-gray-300">About</a>
+        <a href="#gallery" class="hover:text-gray-300">Gallery</a>
+        <a href="#blog" class="hover:text-gray-300">Blog</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      </nav>
+    </div>
+
+    <div id="menuBackdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none
+           transition-opacity duration-500 z-40"></div>
+  </section>
+
+  <!-- ===================== -->
+  <!-- HERO / CAROUSEL -->
+  <!-- ===================== -->
+  <section id="hero" class="w-full h-screen relative">
+    <div id="carousel" class="w-full h-full relative overflow-hidden">
+      <!-- Images -->
+      <img src="/public/birds.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700">
+      <img src="/public/brothers.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
+      <img src="/public/lighthouse.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/20 pointer-events-none z-10"></div>
+
+      <!-- Arrows -->
+      <button id="prevBtn" class="absolute left-10 top-1/2 -translate-y-1/2 text-white text-5xl bg-black/40 hover:bg-black/60 p-2 rounded-lg z-50">
+       &#8249;
+      </button>
+      <button id="nextBtn" class="absolute right-10 top-1/2 -translate-y-1/2 text-white text-5xl bg-black/40 hover:bg-black/60 p-2 rounded-lg z-50">
+        &#8250;
+      </button>
+    </div>
+
+    <!-- Title + description -->
+    <div class="absolute bottom-6 right-6 md:bottom-10 md:right-10 text-right max-w-xs"">
+      <h1 class="text-white text-5xl md:text-7xl font-bold"
+          style="font-family: 'Playfair Display', serif;">
+        Capturing Moments
+      </h1>
+      <p class="text-white text-lg md:text-xl mt-2 max-w-xs opacity-90">
+        Bringing your memories to life through timeless photography. Each moment captured tells a story that lasts forever.
+      </p>
+    </div>
+  </section>
+
+<!-- ===================== -->
+<!-- ABOUT SECTION -->
+<!-- ===================== -->
+<section id="about"
+  class="w-full min-h-screen bg-white text-b
+         flex items-center px-6 md:px-10">
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    <!-- LEFT: TEXT -->
+    <div class="flex flex-col justify-center pt-20 md:pt-0">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 mt-6"
+          style="font-family: 'Playfair Display', serif;">
+        About Capturing Moments
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed mb-6 opacity-90 max-w-md">
+        Every photograph is more than an image — it’s a feeling frozen in time.
+        I focus on natural light, real emotion, and honest storytelling to
+        create images that feel timeless.
+      </p>
+
+      <a href="gallery.html"
+         class="inline-block w-fit px-8 py-4 text-lg font-semibold
+                border border-black /80 rounded-md
+                hover:bg-white hover:text-gray-900
+                transition-all duration-300">
+        View My Work
+      </a>
+    </div>
+
+    <!-- RIGHT: TALL PORTRAIT IMAGE -->
+    <div class="relative w-full max-w-sm mx-auto h-[50vh] md:h-[70vh] mb-3">
+      <img src="/public/photographer.jpg"
+           alt="Portrait photography"
+           class="w-full h-full object-cover rounded-lg shadow-2xl" />
+
+      <!-- Subtle overlay -->
+      <div class="absolute inset-0 bg-black/10 rounded-lg pointer-events-none"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== -->
+<!-- GALLERY SECTION -->
+<!-- ===================== -->
+<section id="gallery" class="w-full py-24 px-10 bg-neutral-900 text-white">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-12"
+        style="font-family: 'Playfair Display', serif;">
+      Gallery
+    </h2>
+
+    <!-- Masonry Grid -->
+    <div class="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
+
+  <img src="/public/building9.jpg"
+       class="gallery-img w-full h-[380px] object-cover rounded-lg cursor-pointer" />
+
+  <img src="/public/building4.jpg"
+       class="gallery-img w-full h-[380px] object-cover rounded-lg cursor-pointer" />
+
+  <img src="/public/building7.jpg"
+       class="gallery-img w-full h-[320px] object-cover rounded-lg cursor-pointer" />
+
+  <img src="/public/building1.jpg"
+       class="gallery-img w-full h-[420px] object-cover rounded-lg cursor-pointer" />
+
+  <img src="/public/building6.JPG"
+       class="gallery-img w-full h-[260px] object-cover rounded-lg cursor-pointer" />
+
+  <img src="/public/building2.jpg"
+       class="gallery-img w-full h-[360px] object-cover rounded-lg cursor-pointer" />
+
+  <img src="/public/building5.jpg"
+       class="gallery-img w-full h-[300px] object-cover rounded-lg cursor-pointer" />
+
+  <img src="/public/building3.jpg"
+       class="gallery-img w-full h-[440px] object-cover rounded-lg cursor-pointer" />
+
+  <img src="/public/building8.jpg"
+       class="gallery-img w-full h-[325px] object-cover rounded-lg cursor-pointer" />
+
+</div>
+  </div>
+</section>
+<!-- ===================== -->
+<!-- LIGHTBOX -->
+<!-- ===================== -->
+<div id="lightbox"
+     class="fixed inset-0 bg-black/90 hidden items-center justify-center
+            z-[100] transition-opacity duration-300 opacity-0">
+
+  <button id="lightboxClose"
+          class="absolute top-6 right-10 text-white text-5xl">&times;</button>
+
+  <button id="lightboxPrev"
+          class="absolute left-4 md:left-80 text-white text-5xl bg-black/40 hover:bg-black/60 p-2 rounded-md z-50">&#8249;</button>
+
+  <img id="lightboxImg"
+       class="max-h-[50vh] max-w-[75vw] object-contain
+            transition-all duration-300 ease-out scale-100" />
+
+  <button id="lightboxNext"
+          class="absolute right-4 md:right-80 text-white text-5xl bg-black/40 hover:bg-black/60 p-2 rounded-md text-center z-50">&#8250;</button>
+</div>
+
+<!-- ===================== -->
+<!-- BLOG SECTION -->
+<!-- ===================== -->
+<section id="blog"
+  class="w-full min-h-screen bg-white text-neutral-900 px-6 py-24">
+
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
+
+    <!-- MAIN ARTICLE -->
+    <article id="blogContent"
+      class="lg:col-span-8 max-w-3xl mx-auto px-6">
+      <!-- JS injects content here -->
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="lg:col-span-4 lg:border-l border-neutral-200 lg:pl-6">
+
+      <h3 class="text-xl font-semibold mb-6 opacity-80">
+        Recent Posts
+      </h3>
+
+      <ul id="blogList" class="space-y-6 text-sm">
+        <!-- Auto-generated -->
+      </ul>
+
+    </aside>
+
+  </div>
+</section>
+
+<!-- ===================== -->
+<!-- CONTACT SECTION -->
+<!-- ===================== -->
+<section id="contact"
+  class="relative w-full min-h-screen flex items-center justify-center
+         bg-neutral-900 text-white px-6 py-24">
+
+  <!-- FLOATING SOCIAL BAR -->
+  <div class="hidden md:flex flex-col gap-6 absolute left-12 top-1/2 -translate-y-1/2">
+
+    <a href="#" aria-label="Facebook"
+       class="w-10 h-10 flex items-center justify-center
+              border border-white/30 rounded-full
+              hover:bg-white hover:text-black transition">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5A3.5 3.5 0 0 1 14.3 6h2.7v3h-2c-1 0-1.3.5-1.3 1.2V12H17l-.5 3h-2.8v7A10 10 0 0 0 22 12z"/>
+      </svg>
+    </a>
+
+    <a href="#" aria-label="X"
+       class="w-10 h-10 flex items-center justify-center
+              border border-white/30 rounded-full
+              hover:bg-white hover:text-black transition">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M18.2 2H21l-6.7 7.7L22 22h-6.9l-5.4-7L3.9 22H1l7.2-8.3L2 2h7l4.9 6.4L18.2 2z"/>
+      </svg>
+    </a>
+
+    <a href="#" aria-label="LinkedIn"
+       class="w-10 h-10 flex items-center justify-center
+              border border-white/30 rounded-full
+              hover:bg-white hover:text-black transition">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.1a4.2 4.2 0 0 1 3.8-2.1c4.1 0 4.8 2.7 4.8 6.1V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21H9z"/>
+      </svg>
+    </a>
+
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="w-full max-w-xl bg-white/10 backdrop-blur-md
+              rounded-xl p-10 shadow-xl">
+
+    <h2 class="text-4xl font-bold mb-8"
+        style="font-family: 'Playfair Display', serif;">
+      Book a Session
+    </h2>
+
+    <form class="space-y-6">
+
+      <input type="text" placeholder="Name"
+        class="w-full bg-transparent border border-white/30
+               rounded-md px-4 py-3 text-white
+               placeholder-white/60
+               focus:outline-none focus:border-white" />
+
+      <input type="email" placeholder="Email"
+        class="w-full bg-transparent border border-white/30
+               rounded-md px-4 py-3 text-white
+               placeholder-white/60
+               focus:outline-none focus:border-white" />
+
+      <textarea rows="4" placeholder="Tell me about your session"
+        class="w-full bg-transparent border border-white/30
+               rounded-md px-4 py-3 text-white
+               placeholder-white/60
+               focus:outline-none focus:border-white"></textarea>
+
+      <button type="submit"
+        class="w-full py-3 mt-4 text-lg font-semibold
+               bg-white text-black rounded-md
+               hover:bg-neutral-200 transition">
+        Book a Session
+      </button>
+
+    </form>
+  </div>
+
+</section>
+
+
+</body>
+
+</html>
+
+
+
+
