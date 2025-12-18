@@ -30,7 +30,7 @@ tapestry for architectural exploration.
       title: "Portraits in Silence",
       date: "August 28, 2025",
       author: "Jane Doe",
-      image: "brothers.jpg",
+      image: "trac-vu-bird.jpg",
       content: `
 Stillness reveals more than motion ever could.
 

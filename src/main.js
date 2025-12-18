@@ -24,34 +24,117 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================
-  // Manual Carousel
-  // ==========================
-  const images = document.querySelectorAll(".carousel-img");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
+// ==========================
+// Infinite Hero Carousel
+// ==========================
+const images = document.querySelectorAll(".carousel-img");
+const dotsContainer = document.getElementById("carouselDots");
+const carousel = document.getElementById("carousel");
 
-  let index = 0;
+const carouselText = document.getElementById("carouselText");
+const carouselTitle = document.getElementById("carouselTitle");
+const carouselCaption = document.getElementById("carouselCaption");
 
-  function showImage(i) {
-    images.forEach((img, idx) => {
-      img.style.opacity = idx === i ? "1" : "0";
-    });
+let index = 0;
+let interval;
+let startX = 0;
+
+// --------------------------
+// Create dots
+// --------------------------
+images.forEach((_, i) => {
+  const dot = document.createElement("button");
+  dot.className = "w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition";
+  dot.addEventListener("click", () => {
+    index = i;
+    showSlide(index);
+    resetCarousel();
+  });
+  dotsContainer.appendChild(dot);
+});
+
+const dots = dotsContainer.querySelectorAll("button");
+
+// --------------------------
+// Show slide with text
+// --------------------------
+function showSlide(i) {
+  const img = images[i];
+
+  // Update images
+  images.forEach((slide, idx) => {
+    slide.style.opacity = idx === i ? "1" : "0";
+  });
+
+  // Update dots
+  dots.forEach((dot, idx) => {
+    dot.classList.toggle("bg-white", idx === i);
+    dot.classList.toggle("bg-white/50", idx !== i);
+  });
+
+// Animate text
+carouselText.classList.remove("show"); // fade out
+setTimeout(() => {
+  carouselTitle.textContent = img.dataset.title;
+  carouselCaption.textContent = img.dataset.caption;
+  carouselText.classList.add("show"); // fade in + slide up
+}, 400);
+}
+
+// --------------------------
+// Next slide (infinite)
+// --------------------------
+function nextSlide() {
+  index = (index + 1) % images.length;
+  showSlide(index);
+}
+
+// --------------------------
+// Auto-play (every 15s)
+// --------------------------
+function startCarousel() {
+  interval = setInterval(nextSlide, 15000);
+}
+
+function stopCarousel() {
+  clearInterval(interval);
+}
+
+function resetCarousel() {
+  stopCarousel();
+  startCarousel();
+}
+
+// --------------------------
+// Pause on hover
+// --------------------------
+carousel.addEventListener("mouseenter", stopCarousel);
+carousel.addEventListener("mouseleave", startCarousel);
+
+// --------------------------
+// Touch swipe (mobile)
+// --------------------------
+carousel.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+carousel.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = startX - endX;
+  if (Math.abs(diff) > 50) {
+    diff > 0 ? nextSlide() : (index = (index - 1 + images.length) % images.length);
+    showSlide(index);
+    resetCarousel();
   }
+});
 
-  if (prevBtn && nextBtn && images.length > 0) {
-    prevBtn.addEventListener("click", () => {
-      index = Math.max(0, index - 1); // Stops at first image
-      showImage(index);
-    });
+// --------------------------
+// Init
+// --------------------------
+showSlide(index);
+startCarousel();
 
-    nextBtn.addEventListener("click", () => {
-      index = Math.min(images.length - 1, index + 1); // Stops at last image
-      showImage(index);
-    });
-  }
 
-  showImage(index);
 });
 
 // =====================
@@ -149,6 +232,19 @@ function renderPost(post) {
       <p>${parseMarkdown(post.content)}</p>
     </div>
   `;
+}
+
+  // ==========================
+// Subtle Parallax (About Image)
+// ==========================
+const aboutImage = document.getElementById("aboutImage");
+
+if (aboutImage) {
+  window.addEventListener("scroll", () => {
+    const rect = aboutImage.getBoundingClientRect();
+    const offset = rect.top * 0.08; // VERY subtle
+    aboutImage.style.transform = `translateY(${offset}px)`;
+  });
 }
 
 

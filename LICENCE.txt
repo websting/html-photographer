@@ -1,0 +1,82 @@
+COMMERCIAL TEMPLATE LICENSE
+
+Copyright © 2025 simpleWebDesigns
+All rights reserved.
+
+This license applies to the digital template product
+(the “Template”) provided by simpleWebDesigns.
+
+──────────────────────────────────────────────
+1. GRANT OF LICENSE
+──────────────────────────────────────────────
+Upon purchase, you are granted a non-exclusive,
+non-transferable, perpetual license to use the
+Template to create unlimited personal or commercial
+end products, including client projects.
+
+You may:
+• Use the Template for personal or commercial websites
+• Modify, customize, and adapt the Template
+• Use the Template for client work and client deliverables
+
+──────────────────────────────────────────────
+2. RESTRICTIONS
+──────────────────────────────────────────────
+You may NOT:
+• Resell, sublicense, share, or redistribute the Template
+  or any derivative work as a template, theme, UI kit,
+  starter project, or similar product
+• Make the Template available for download (free or paid)
+• Include the Template in any competing product,
+  marketplace, or repository
+• Claim authorship or ownership of the Template
+
+──────────────────────────────────────────────
+3. SOURCE CODE & ASSETS
+──────────────────────────────────────────────
+The Template includes source code, styles, and assets.
+Ownership of the Template remains with simpleDesigns.
+
+Any included assets (images, icons, fonts) may only be
+used as part of an end product created with the Template
+and may not be redistributed separately.
+
+──────────────────────────────────────────────
+4. NO WARRANTY
+──────────────────────────────────────────────
+The Template is provided “as is”, without warranty of any
+kind, express or implied, including but not limited to
+the warranties of merchantability, fitness for a
+particular purpose, and noninfringement.
+
+In no event shall the author be liable for any claim,
+damages, or other liability arising from the use of the
+Template.
+
+──────────────────────────────────────────────
+5. TERMINATION
+──────────────────────────────────────────────
+This license is automatically terminated if you violate
+any of the restrictions above. Upon termination, you
+must cease all use and delete all copies of the Template.
+
+──────────────────────────────────────────────
+6. MARKETPLACE NOTICE
+──────────────────────────────────────────────
+If this Template is purchased via a third-party
+marketplace (such as ThemeForest), the license terms
+of that marketplace may apply in addition to or in
+place of this license.
+
+──────────────────────────────────────────────
+7. GOVERNING LAW
+──────────────────────────────────────────────
+This license shall be governed by and construed in
+accordance with applicable local laws.
+
+──────────────────────────────────────────────
+8. CONTACT
+──────────────────────────────────────────────
+For license inquiries, contact:
+support@simplewebdesigns.ca
+

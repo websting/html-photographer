@@ -34,3 +34,29 @@ html {
       transform: translateX(0);
     }
   }
+
+  /* Carousel text animation */
+#carouselText {
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#carouselText.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#carouselDots button {
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+#carouselDots button:hover {
+  transform: scale(1.2);
+}
+
+#carouselTitle,
+#carouselCaption {
+  white-space: nowrap;       /* Keep on one line */
+  overflow: hidden;          /* Hide overflow */
+  text-overflow: ellipsis;   /* Show "..." if too long */
+}

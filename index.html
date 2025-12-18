@@ -47,80 +47,97 @@
            transition-opacity duration-500 z-40"></div>
   </section>
 
-  <!-- ===================== -->
-  <!-- HERO / CAROUSEL -->
-  <!-- ===================== -->
-  <section id="hero" class="w-full h-screen relative">
-    <div id="carousel" class="w-full h-full relative overflow-hidden">
-      <!-- Images -->
-      <img src="/public/birds.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700">
-      <img src="/public/brothers.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
-      <img src="/public/lighthouse.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
+<!-- ===================== -->
+<!-- HERO / CAROUSEL -->
+<!-- ===================== -->
+<section id="hero" class="w-full h-screen relative">
+  <div id="carousel" class="w-full h-full relative overflow-hidden">
 
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/20 pointer-events-none z-10"></div>
+    <!-- Slides with title & caption -->
+    <img src="/public/matthew-smith-nature.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+         data-title="Capturing Moments" data-caption="Experience the beauty of nature through my lens" />
 
-      <!-- Arrows -->
-      <button id="prevBtn" class="absolute left-10 top-1/2 -translate-y-1/2 text-white text-5xl bg-black/40 hover:bg-black/60 p-2 rounded-lg z-50">
-       &#8249;
-      </button>
-      <button id="nextBtn" class="absolute right-10 top-1/2 -translate-y-1/2 text-white text-5xl bg-black/40 hover:bg-black/60 p-2 rounded-lg z-50">
-        &#8250;
-      </button>
+    <img src="/public/manas-manikoth-bonding.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+         data-title="Family Bonds" data-caption="Heartfelt moments frozen in time." />
+
+    <img src="/public/neom-adventure.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+         data-title="Adventure Awaits" data-caption="Storytelling photography" />
+
+    <img src="/public/redcharlie-hurban.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+         data-title="Urban Life" data-caption="Dynamic cityscapes and lifestyle portraits" />
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/30 z-10"></div>
+
+    <!-- Text Overlay -->
+    <div id="carouselText" class="absolute bottom-10 right-10 z-20 text-right max-w-md opacity-0 transition-opacity duration-1000">
+      <h1 id="carouselTitle" class="text-white text-4xl md:text-5xl font-bold leading-tight"
+          style="font-family: 'Playfair Display', serif;"></h1>
+      <p id="carouselCaption" class="text-white text-lg md:text-xl mt-4 opacity-90"></p>
     </div>
 
-    <!-- Title + description -->
-    <div class="absolute bottom-6 right-6 md:bottom-10 md:right-10 text-right max-w-xs"">
-      <h1 class="text-white text-5xl md:text-7xl font-bold"
-          style="font-family: 'Playfair Display', serif;">
-        Capturing Moments
-      </h1>
-      <p class="text-white text-lg md:text-xl mt-2 max-w-xs opacity-90">
-        Bringing your memories to life through timeless photography. Each moment captured tells a story that lasts forever.
-      </p>
-    </div>
-  </section>
+    <!-- Dots -->
+    <div id="carouselDots" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-3"></div>
+
+  </div>
+</section>
+
+
 
 <!-- ===================== -->
 <!-- ABOUT SECTION -->
 <!-- ===================== -->
 <section id="about"
-  class="w-full min-h-screen bg-white text-b
-         flex items-center px-6 md:px-10">
+  class="w-full min-h-screen bg-[#f8f7f5] text-neutral-900
+         flex items-center px-6 md:px-10 overflow-hidden">
 
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
     <!-- LEFT: TEXT -->
-    <div class="flex flex-col justify-center pt-20 md:pt-0">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 mt-6"
-          style="font-family: 'Playfair Display', serif;">
-        About Capturing Moments
-      </h2>
+    <div class="flex flex-col justify-center pt-20 md:pt-0 space-y-6">
 
-      <p class="text-lg md:text-xl leading-relaxed mb-6 opacity-90 max-w-md">
-        Every photograph is more than an image — it’s a feeling frozen in time.
-        I focus on natural light, real emotion, and honest storytelling to
-        create images that feel timeless.
-      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight"
+    style="font-family: 'Playfair Display', serif;">
+  About Capturing Moments
+</h2>
 
-      <a href="gallery.html"
-         class="inline-block w-fit px-8 py-4 text-lg font-semibold
-                border border-black /80 rounded-md
-                hover:bg-white hover:text-gray-900
-                transition-all duration-300">
-        View My Work
-      </a>
+<p class="text-lg md:text-xl leading-relaxed opacity-90 max-w-md">
+  Every photograph is more than an image — it’s a feeling frozen in time.
+  I focus on natural light, real emotion, and honest storytelling to
+  create images that feel timeless.
+</p>
+
+<div class="flex items-center gap-4 opacity-70">
+  <span class="w-12 h-[1px] bg-black"></span>
+  <span class="text-sm tracking-widest uppercase">Est. 2025</span>
+</div>
+
+
+<a href="gallery.html"
+   class="group inline-flex items-center gap-3 w-fit px-8 py-4 text-lg font-semibold
+          border border-black/80 rounded-md
+          hover:bg-black hover:text-white
+          transition-all duration-300">
+  View My Work
+  <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+</a>
+
     </div>
 
     <!-- RIGHT: TALL PORTRAIT IMAGE -->
-    <div class="relative w-full max-w-sm mx-auto h-[50vh] md:h-[70vh] mb-3">
-      <img src="/public/photographer.jpg"
-           alt="Portrait photography"
-           class="w-full h-full object-cover rounded-lg shadow-2xl" />
+    <div id="aboutImage"
+     class="relative w-full max-w-sm mx-auto h-[50vh] md:h-[70vh] mb-3">
 
-      <!-- Subtle overlay -->
-      <div class="absolute inset-0 bg-black/10 rounded-lg pointer-events-none"></div>
-    </div>
+  <!-- Background accent -->
+  <div class="absolute -top-6 -left-6 w-full h-full border border-black/10 rounded-lg"></div>
+
+  <img src="/public/ravi-pinisetti-falls.jpg"
+       alt="Portrait photography"
+       class="relative w-full h-full object-cover rounded-lg shadow-xl
+       transition-transform duration-700 hover:scale-[1.02]"
+ />
+</div>
+
   </div>
 </section>
 
