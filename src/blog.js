@@ -15,7 +15,7 @@ if (blogContent && blogList) {
       title: "Architectural Photography: A walk through history",
       date: "September 12, 2025",
       author: "John Doe",
-      image: "/public/arco.jpg",
+      image: "arco.jpg",
       content: `
 <p>
 Architecture tells the story of humanity’s evolution, capturing the spirit of
@@ -47,7 +47,7 @@ architectural photography:
       title: "Portraits in Silence",
       date: "August 28, 2025",
       author: "Jane Doe",
-      image: "/public/brothers.jpg",
+      image: "brothers.jpg",
       content: `
 Stillness reveals more than motion ever could.
 
