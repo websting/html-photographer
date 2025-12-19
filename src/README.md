@@ -4,6 +4,13 @@ A modern, lightweight, and fully responsive website template built with **Vite**
 
 Designed for developers, designers, startups, freelancers, agencies, portfolios, and client projects.
 
+### 🔗 Live Demo
+https://ahtml-photographer.netlify.app/
+
+## 🖼 Preview
+![Homepage Preview](/public/screenshot.png)
+
+
 ---
 
 ## ✨ Features
@@ -61,7 +68,7 @@ Designed for developers, designers, startups, freelancers, agencies, portfolios,
         Do not redistribute placeholder images separately
 
 ### 📁 Project Structure
-    photogrphy/
+    photography/
     ├─ public/
     │  └─ images/
     ├─ src/

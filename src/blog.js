@@ -11,17 +11,13 @@ if (blogContent && blogList) {
   // =====================
   const posts = [
     {
-      slug: "architectural-photography",
-      title: "Architectural Photography: A walk through history",
+      slug: "Blog Section Example",
+      title: "Blog Section Example",
       date: "September 12, 2025",
       author: "John Doe",
       image: "arco.jpg",
-      content: `
-
-Architecture tells the story of humanity’s evolution through time.
-
-Old Havana, with its vibrant colors and intricate details, offers a rich
-tapestry for architectural exploration.
+      content: `This layout demonstrates how blog or article content can be displayed.
+      No CMS or backend is included by default.
 `
 
 },
@@ -31,11 +27,9 @@ tapestry for architectural exploration.
       date: "August 28, 2025",
       author: "Jane Doe",
       image: "trac-vu-bird.jpg",
-      content: `
-Stillness reveals more than motion ever could.
-
-Portrait photography is about waiting — for light, for breath,
-for the moment someone forgets the camera is there.
+      content: `Stillness reveals more than motion ever could.
+      Portrait photography is about waiting — for light, for breath,
+      for the moment someone forgets the camera is there.
 `
     }
   ];

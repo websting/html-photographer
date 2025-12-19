@@ -54,23 +54,34 @@
   <div id="carousel" class="w-full h-full relative overflow-hidden">
 
     <!-- Slides with title & caption -->
-    <img src="/public/matthew-smith-nature.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-         data-title="Living earth" data-caption="Planetary Biodiversity" />
+    <img src="/public/matthew-smith-nature.jpg"
+     class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+     data-title="Photo Starter Template"
+     data-caption="A clean Vite + Tailwind starting point for developers" />
 
-    <img src="/public/manas-manikoth-bonding.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-         data-title="Living ties" data-caption="Enduring Relationships" />
 
-    <img src="/public/neom-adventure.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-         data-title="Adventure Awaits" data-caption="Storytelling photography" />
+    <img src="/public/manas-manikoth-bonding.jpg"
+     class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+     data-title="Built for Customization"
+     data-caption="Replace content, styles, and sections easily" />
 
-    <img src="/public/redcharlie-hurban.jpg" class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-         data-title="Urban Life" data-caption="Contemporary Cityscapes" />
+
+    <img src="/public/neom-adventure.jpg"
+     class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+     data-title="Fast-Lightweight"
+     data-caption="No frameworks. No lock-in. No bloat" />
+
+    <img src="/public/redcharlie-hurban.jpg"
+     class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+     data-title="Production-Ready Base"
+     data-caption="Use for portfolios, client sites, or demos" />
+
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/30 z-10"></div>
 
     <!-- Text Overlay -->
-    <div id="carouselText" class="absolute bottom-10 right-10 z-20 text-right max-w-md opacity-0 transition-opacity duration-1000">
+    <div id="carouselText" class="absolute bottom-10 right-10 z-20 text-right max-w-lg opacity-0 transition-opacity duration-1000">
       <h1 id="carouselTitle" class="text-white text-4xl md:text-5xl font-bold leading-tight"
           style="font-family: 'Playfair Display', serif;"></h1>
       <p id="carouselCaption" class="text-white text-lg md:text-xl mt-4 opacity-90"></p>
@@ -98,29 +109,35 @@
 
       <h2 class="text-4xl md:text-5xl font-bold tracking-tight"
     style="font-family: 'Playfair Display', serif;">
-  About Capturing Moments
+  About This Template
 </h2>
 
 <p class="text-lg md:text-xl leading-relaxed opacity-90 max-w-md">
-  Every photograph is more than an image — it’s a feeling frozen in time.
-  I focus on natural light, real emotion, and honest storytelling to
-  create images that feel timeless.
+  This project is a modern starter template designed for developers who
+  need a clean, flexible foundation for photography-style websites.
+</p>
+
+<p class="text-lg leading-relaxed opacity-80 max-w-md">
+  It focuses on structure, layout, and performance — not final content.
+  Swap text, images, and styles to fit client work, portfolios, or demos.
 </p>
 
 <div class="flex items-center gap-4 opacity-70">
   <span class="w-12 h-[1px] bg-black"></span>
-  <span class="text-sm tracking-widest uppercase">Est. 2025</span>
+  <span class="text-sm tracking-widest uppercase">
+    Starter Template · v1.0
+  </span>
 </div>
 
-
-<a href="gallery.html"
+<a href="#gallery"
    class="group inline-flex items-center gap-3 w-fit px-8 py-4 text-lg font-semibold
           border border-black/80 rounded-md
           hover:bg-black hover:text-white
           transition-all duration-300">
-  View My Work
+  View Layout Examples
   <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
 </a>
+
 
     </div>
 
@@ -147,10 +164,15 @@
 <section id="gallery" class="w-full py-24 px-10 bg-neutral-900 text-white">
   <div class="max-w-6xl mx-auto">
 
-    <h2 class="text-4xl md:text-5xl font-bold mb-12"
-        style="font-family: 'Playfair Display', serif;">
-      Gallery
-    </h2>
+    <h2 class="text-4xl md:text-5xl font-bold mb-4"
+    style="font-family: 'Playfair Display', serif;">
+  Gallery Layout Example
+</h2>
+
+<p class="text-neutral-400 mb-12 max-w-xl">
+  This section demonstrates a responsive masonry-style gallery.
+  All images are placeholders — replace them with your own assets.
+</p>
 
     <!-- Masonry Grid -->
     <div class="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
@@ -279,10 +301,15 @@
   <div class="w-full max-w-xl bg-white/10 backdrop-blur-md
               rounded-xl p-10 shadow-xl">
 
-    <h2 class="text-4xl font-bold mb-8"
-        style="font-family: 'Playfair Display', serif;">
-      Book a Session
-    </h2>
+    <h2 class="text-4xl font-bold mb-4"
+    style="font-family: 'Playfair Display', serif;">
+  Contact Form Layout
+</h2>
+
+<p class="text-white/70 mb-8">
+  This is a sample contact form layout.
+  Connect it to your preferred backend or form service.
+</p>
 
     <form class="space-y-6">
 
@@ -308,13 +335,18 @@
         class="w-full py-3 mt-4 text-lg font-semibold
                bg-white text-black rounded-md
                hover:bg-neutral-200 transition">
-        Book a Session
+        Submit Message
       </button>
 
     </form>
   </div>
-
 </section>
+
+
+<footer class="w-full py-8 bg-black text-neutral-400 text-center text-sm">
+  Starter Template by simpleWebDesigns · Built with Vite & Tailwind CSS
+</footer>
+
 
 
 </body>
